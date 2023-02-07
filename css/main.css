@@ -40,7 +40,8 @@ a{text-decoration: none;}
 /* section */
 /* 트레일러 */
 #trailer{background-color: #ddd;}
-#trailer .inner{width: 100%; height: 500px; background: url("");} 
+#trailer .inner{width: 100%; height: 500px;}
+#trailer .inner img{display: block; width: 100%;}
 #trailer .movie_info{position: relative; left: 20%; top: 50%; transform: translateY(-50%); height: 25%;  display: flex; flex-direction: column; align-items: flex-start; width: 350px;}
 #trailer .movie_story{font-size: 13px; margin: 5px 0;}
 #trailer .movie_info .more_button{display: block; width: 120px; font: 13px/35px 'inherit'; color: #000; text-align: center; border: 1px solid #000; border-radius: 20px;}
@@ -49,8 +50,12 @@ a{text-decoration: none;}
 .movie_wrap{width: 252px;}
 .movie_poster{margin-bottom: 5px; width: calc(252px-30%); height: 364px; background-color: #ddd; border-radius: 5px; overflow: hidden;}
 /* 포스터 이미지 사이즈 조정 */
-.movie_poster img{display: block; width: 100%;} 
-.movie_poster img:hover{transform: scale(1.2); transition: 0.3s;}
+.movie_poster img{display: block; width: 100%; transition: 0.3s;} 
+.movie_poster img:hover{animation: scaleUp 0.3s; transform: scale(1.05);}
+@keyframes scaleUp {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.05);}
+}
 .movie_info{padding: 0 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
 .movie_info .movie_title{font-size: 15px; font-weight: bold;}
 .movie_info .movie_review{font-size: 13px; display: flex; align-content: center;}
@@ -77,3 +82,6 @@ a{text-decoration: none;}
 #footer_gnb{display: flex;}
 #footer_gnb>li:nth-of-type(even){margin: 0 15px;}
 #footer_gnb>li>a{display: block; color: #000;}
+
+
+/* 로그인모달 */
