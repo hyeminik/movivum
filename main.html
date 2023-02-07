@@ -17,19 +17,13 @@
                 <nav id="gnb">
                     <div class="left"><a href="main.html" class="logo">MOVIVUM</a></div>
                    <div class="middle">
-                    <input type="text" name="search" class="search" placeholder="영화 이름을 검색해보세요!"><span class="material-symbols-outlined search_icon">search</span></div>
+                        <input type="text" name="search" class="search" placeholder="영화 이름을 검색해보세요."><span class="material-symbols-outlined search_icon">search</span>
+                    </div>
                    <div class="right"><a href="#" name="login" class="login"><span class="material-symbols-outlined login_icon">face</span></a></div>
                 </nav>
             </div>
         </div>
     </header>
-
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary">Left</button>
-        <button type="button" class="btn btn-primary">Middle</button>
-        <button type="button" class="btn btn-primary">Right</button>
-    </div>
-    
     <section id="trailer" class="content">
         <div class="inner">
             <div class=""></div>
@@ -44,15 +38,6 @@
         <div class="inner">
             <h2 class="title">영화 인기순</h2>
             <div class="wrap" id="popular_wrap">
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -60,52 +45,7 @@
     <section id="recommend" class="content">
         <div class="inner">
             <h2 class="title">영화 추천순</h2>
-            <div class="wrap">
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
+            <div class="wrap" id="recommend_wrap">
             </div>
         </div>
     </section>
@@ -113,51 +53,6 @@
         <div class="inner">
             <h2 class="title">영화 최신순</h2>
             <div class="wrap" id="now_playing_wrap">
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
-                <div class="movie_wrap">
-                    <div class="movie_poster">
-                        <!-- 영화포스터 -->
-                    </div>
-                    <div class="movie_info">
-                        <span class="movie_title">영화이름</span>
-                        <span class="movie_review">평균<span class="material-symbols-outlined star">grade</span>5.0</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -190,15 +85,23 @@
     </footer>
 
     <!-- 로그인 모달 -->
-    <div class="login_modal">
+    <div class="blackbg"></div>
+    <div class="login_box">
         <div class="inner">
             <div class="wrap">
-                <form  method="post" name="login" action="login.jsp">
-                    <div class="id">
-                        <label for=""></label>
-                        <input>
-                    </div>
+                <div class="login_header">
+                    <h2 class="logo">MOVIVUM</h2>
+                    <p>로그인</p>
+                </div>
+                <form method="post" name="login" action="login.jsp">
+                    <input type="text" class="id_input" placeholder="아이디">
+                    <input type="password" class="pw_input" placeholder="비밀번호">
+                    <button type="submit" class="login_btn">로그인</button>
                 </form>
+                <div class="login_bottom">
+                    <a href="#" class="find_password">비밀번호를 잊어버리셨나요?</a>
+                    <p class="join">계정이 없으신가요?<a href="join.html" class="join_btn">회원가입</a></p>
+                </div>
             </div>
         </div>
     </div>
