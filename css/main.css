@@ -1,0 +1,79 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+*::before,*::after{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{text-decoration: none;}
+.content{width:100%; padding: 100px 0;}
+.content .wrap{display: flex; flex-flow: row wrap; justify-content: space-between;}
+.inner{width: 1290px; margin: 0 auto;}
+@media screen and (max-width: 1200px) {
+    .content{padding: 120px 40px;}
+    .inner{width: 100%;}
+}
+
+/* header */
+#header .inner{}
+#gnb{height:60px; display: flex; justify-content: space-between; align-items: center;}
+#gnb .logo{display: block; font: bold 18px 'inherit'; color: #000;}
+#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: #f5f5f7; border-radius: 30px;}
+#gnb .search{margin-right: 5px; width: 340px; height: 25px; border: none; background-color: #f5f5f7;}
+#gnb .search:active{outline: none;}
+#gnb .search:focus{outline: none;}
+#gnb .search_icon{
+    display: inline-block; color: #888; cursor: pointer;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}
+#gnb .login{}
+#gnb .login_icon{
+    display: block; color: #000;
+    font-size: 35px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}
+
+/* section */
+/* 트레일러 */
+#trailer{background-color: #ddd;}
+#trailer .inner{width: 100%; height: 500px; background: url("");} 
+#trailer .movie_info{position: relative; left: 20%; top: 50%; transform: translateY(-50%); height: 25%;  display: flex; flex-direction: column; align-items: flex-start; width: 350px;}
+#trailer .movie_story{font-size: 13px; margin: 5px 0;}
+#trailer .movie_info .more_button{display: block; width: 120px; font: 13px/35px 'inherit'; color: #000; text-align: center; border: 1px solid #000; border-radius: 20px;}
+
+/* 인기순,추천순,최신순 공통 */
+.movie_wrap{width: 252px;}
+.movie_poster{margin-bottom: 5px; width: calc(252px-30%); height: 364px; background-color: #ddd; border-radius: 5px; overflow: hidden;}
+/* 포스터 이미지 사이즈 조정 */
+.movie_poster img{display: block; width: 100%;} 
+.movie_poster img:hover{transform: scale(1.2); transition: 0.3s;}
+.movie_info{padding: 0 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.movie_info .movie_title{font-size: 15px; font-weight: bold;}
+.movie_info .movie_review{font-size: 13px; display: flex; align-content: center;}
+.movie_review .star {
+    font-size: 13px; 
+    color: #ffa404;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
+}
+
+
+/* footer */
+#footer{padding: 30px 30px; background-color: #f5f5f7;}
+#footer .inner{}
+.left_footer{}
+.left_footer .logo>a{display: block; font: bold 18px/30px 'inherit'; color: #000;}
+.left_footer .sns{display: flex; justify-content: center;}
+.left_footer .sns li{}
+.left_footer .sns li>a{display: block; color: #000;} 
+.right_footer{font-size: 13px;}
+#footer_gnb{display: flex;}
+#footer_gnb>li:nth-of-type(even){margin: 0 15px;}
+#footer_gnb>li>a{display: block; color: #000;}
