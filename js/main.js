@@ -85,11 +85,11 @@ $.ajax({
     })
     // 로그인 아이콘 선택 시 모달창 d/p
     $('.login_icon').click(function(){
-        $('.blackbg').fadeIn();
+        $('.bg').fadeIn();
         $('.login_box').show();
     })
-    $('.blackbg').click(function(){
-        $('.blackbg').fadeOut();
+    $('.bg').click(function(){
+        $('.bg').fadeOut();
         $('.login_box').hide();
     })
 })
