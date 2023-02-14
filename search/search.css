@@ -89,3 +89,4 @@ a{text-decoration: none;}
 #footer_gnb{display: flex;}
 #footer_gnb>li:nth-of-type(even){margin: 0 15px;}
 #footer_gnb>li>a{display: block; color: #000;}
+
