@@ -26,23 +26,8 @@ body{background-color: rgba(2, 4, 10);}
 #gnb .search:active{outline: none;}
 #gnb .search:focus{outline: none;}
 #gnb .search::placeholder{color: rgba(255, 255, 255);}
-#gnb .search_icon{
-    display: inline-block; color: rgba(255, 255, 255); cursor: pointer;
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 40
-}
-#gnb .login_icon{
-    display: block; color: rgba(255, 255, 255, 0.8);
-    font-size: 32px;
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 40
-}
+#gnb .search_icon{display: inline-block; color: rgba(255, 255, 255); cursor: pointer; font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 40}
+#gnb .login_icon{display: block; color: rgba(255, 255, 255, 0.8); font-size: 32px; font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 40}
 
 /* section */
 /* 트레일러 */
@@ -59,14 +44,7 @@ body{background-color: rgba(2, 4, 10);}
 }
 #trailer .movie_info{position: absolute; left: 18%; top: 53%; width: 300px; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; color: #fff;}
 #trailer .movie_info .movie_title{font-size: 28px;}
-#trailer .movie_story{
-    margin: 15px 0;
-    font-size: 13px; color: #ffffffbd;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /*리뷰 글 10줄 제한*/
-    overflow: hidden;
-}
+#trailer .movie_story{margin: 15px 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; font-size: 13px; color: #ffffffbd; overflow: hidden;}
 #trailer .more_button{display: block; width: 120px; font: 14px/35px 'inherit'; cursor: pointer; z-index: 9999; color: #ffffffbd; text-align: center; background-color: rgba(255, 255, 255, 0.25); border-radius: 20px;}
 #trailer .more_button:hover{background-color: rgba(21, 21, 21, 0.893);}
 
@@ -85,39 +63,18 @@ body{background-color: rgba(2, 4, 10);}
 .movie_info{padding: 0 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; color: #e3e3e3;}
 .movie_info .movie_title{font-size: 15px; font-weight: bold;}
 .movie_info .movie_review{font-size: 13px; display: flex; align-content: center;}
-.movie_review .star {
-    font-size: 13px; 
-    color: #ffa404;
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 20
-}
+.movie_review .star {font-size: 13px; color: #ffa404; font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0, 'opsz' 20}
 .movie_review .review_total{margin-left: 10px; position: relative;}
-.movie_review .review_total::after{
-    content: ''; display: block; position: absolute;
-    left: -5px; top: 2px; width: 1px; height: 60%; background-color: #a5a5a7;
-}
+.movie_review .review_total::after{content: ''; display: block; position: absolute; left: -5px; top: 2px; width: 1px; height: 60%; background-color: #a5a5a7;}
 /* 슬라이드 좌우 버튼 */
 .swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-    color: #ffffffde;
-}
+.swiper .swiper-button-next {color: #ffffffde;}
 .swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after{
-    position: absolute;
-    transition: 0.3s;
-    font-size: 50px;
-    text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.309);
-}
+.swiper .swiper-button-next::after{position: absolute;transition: 0.3s; font-size: 50px; text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.309);}
 .swiper .swiper-button-prev::after{left: -50px;}
 .swiper .swiper-button-next::after{right: -50px;}
-
 .swiper:hover .swiper-button-prev::after,
-.swiper:hover .swiper-button-next::after{
-    transition: 0.3s;
-}
+.swiper:hover .swiper-button-next::after{transition: 0.3s;}
 .swiper:hover .swiper-button-prev::after{left: -5px;}
 .swiper:hover .swiper-button-next::after{right: -5px;}
 
@@ -127,8 +84,6 @@ body{background-color: rgba(2, 4, 10);}
 #footer{background-color: #1c1d1f; color: #a5a5a7;}
 #footer .inner{padding: 30px 0;}
 #footer .wrap{display: flex; justify-content: space-between;}
-#footer .box{}
-
 #footer_gnb{display: flex;}
 #footer_gnb>li{position: relative;}
 #footer_gnb>li:nth-of-type(even){margin: 0 20px;}
@@ -138,12 +93,10 @@ body{background-color: rgba(2, 4, 10);}
 }
 #footer_gnb>li:last-of-type::after{content: none;}
 #footer_gnb>li>a{display: block; font-size: 14px; color: #a5a5a7;}
-
 #footer .box .info{margin-top: 10px; font: 14px/22px 'inherit';}
 #footer .box .info>p>a{display: inline-block; font: bold 16px 'inherit'; color: #a5a5a7;}
 #footer .box .info>p:last-of-type{margin-top: 10px;}
 /* sns */
-
 #footer .sns{display: flex; align-items: flex-end; height: 100%;}
 #footer .sns>li{margin: 0 5px; width: 35px; height: 35px; border: 1px solid #a5a5a7; border-radius: 100%; overflow: hidden;}
 #footer .sns>li>a{display: block; font: 20px/37px 'inherit'; text-align: center; color: #a5a5a7; transition: 0.2s;}
@@ -152,14 +105,9 @@ body{background-color: rgba(2, 4, 10);}
 
 /* 로그인모달 */
 .blackbg{display: none; position: fixed; left: 0%; top: 0%; z-index: 4; width: 100%; height: 100%; background-color: #0000008f;}
-/* 로그인창 */
 .login_box{display: none; position: fixed; left: 50%; top: 50%; z-index: 5; transform: translate(-50%, -50%); border-radius: 10px;}
 .login_box .inner{width: 300px; background-color: #1b1b1b; border-radius: 10px; overflow: hidden;}
-.login_box .wrap{
-    position: relative;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; 
-    padding: 50px 30px; width: 100%; text-align: center;
-}
+.login_box .wrap{position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 30px; width: 100%;text-align: center;}
 .login_closebtn{position: absolute; right: 5px; top: 5px; z-index: 5; width: 35px; height: 35px; background-color: transparent; border: none; cursor: pointer;}
 .login_closebtn img{filter: invert(0.3);}
 .login_header .logo{color: #fff;}

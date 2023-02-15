@@ -94,7 +94,7 @@ $(function(){
         $('.blackbg').fadeOut();
         $('.login_box').hide();
     })
-
+    // 슬라이드
     var swiper = new Swiper(".swiper", {
         slidesPerView: 5,
         spaceBetween: 20,
