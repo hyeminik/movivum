@@ -1,0 +1,95 @@
+*/*공통사항*/
+{
+	margin:0;/*바깥 여백*/
+	padding:0;/*안쪽 여백*/
+}
+ul {list-style:none;}/*마크없애기*/
+
+.banner
+{
+  	background-color:#F4F4F4;
+  	width: 100%;
+  	height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.banner>div
+{
+	/*border: 10px solid red;*/
+	position:relative;
+    max-width:500px;
+    display: flex;
+    align-items: center;
+}
+#intro_self
+{
+	max-width: 300px;
+}
+
+main
+{	
+	/* border: 10px solid red; */
+	position:relative;
+	margin:auto;
+	width: 1200px;
+	display: flex; /* flex container를 만들어주는 속성 */
+   	justify-content: space-between; /* 행 정렬 하는 속성, 영역 간 공백을 만들어주는 속성 */
+}
+
+.sidebar
+{
+	/* border: 10px solid black; */
+	text-decoration:none;/*밑줄제거*/
+	width: 23%;
+}
+.sidebar ul
+{
+	padding:30px 0px;
+	position: sticky;
+	top: 200px;
+}
+.sidebar li
+{
+	margin: 20px 20px;
+}
+.sidebar a
+{
+	margin: 10px 20px;
+	text-decoration: none;
+	color:black;
+	display: flex;
+    align-items: center;
+	height: 40px;
+}
+.sidebar img
+{
+	width:22px;
+}
+.sidebar li :hover
+{
+	background-color: #F4F4F4;
+}
+.selected
+{
+	background-color: #F4F4F4;
+	font-weight: bold;
+	border-radius:2px;
+	text-decoration: underline;
+}
+
+article
+{	
+	/* border: 10px solid blue; */
+	width:100%;
+}
+article > section
+{
+	/*border: 10px solid green;*/
+	margin: 30px auto;
+	padding: 30px;
+}
+section
+{
+	box-sizing: border-box;
+}
+

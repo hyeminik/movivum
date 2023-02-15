@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mypage.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="mypage.js"></script>
+	<script src="https://kit.fontawesome.com/5ff835e817.js" crossorigin="anonymous"></script>
+    <title>마이페이지</title>
+</head>
+<body>
+	<header>
+	<!-- 네비게이터 -->
+	
+	<!-- 배너영역 -->
+	<section class="banner">
+			<div>
+				<img src="img/User_cicrle_light.svg" alt="유저이미지" width="150"/>
+				<div>
+					<p id="nickname"><strong>닉네임</strong></p>
+					<p id="intro_self">관련 정보가 없습니다.<br>
+						여기에 자기소개 해보세요.</p>
+				</div>
+			</div>
+	</section>
+	<header>
+	
+	<!-- 메인영역 -->
+	<main>
+		<aside class="sidebar">
+			<ul><!-- #none속성안 붙이면 누를때마다 화면스크롤됨 -->
+				<li><a href="#tab1,#none" class="selected"><img src="img/Home_light.svg"/>마이홈</a></li>
+				<li><a href="#tab2,#none"><img src="img/Favorite_light.svg"/>보고싶어요</a></li>
+				<li><a href="#tab3,#none"><img src="img/Chat_light.svg"/>내 리뷰 보기</a></li>
+				<li><a href="#tab4,#none"><img src="img/lightning_light.svg"/>도전과제</a></li>
+				<li><a href="#tab5,#none"><img src="img/Ticket_use_light.svg"/>선호장르</a></li>
+				<li><a href="#tab6,#none"><img src="img/Message_light.svg"/>문의게시판</a></li>
+				<li><a href="#tab7,#none"><img src="img/Setting_line_light.svg"/>회원정보수정</a></li>
+			</ul>
+		</aside>
+		<article>
+			<section id="tab1">
+				<h2>마이홈</h2>
+				<div>
+					<i class="fas fa-sharp fa-solid fa-user"></i>
+					<i class="fas fa-thin fa-face-smile-hearts"></i>
+				</div>
+			</section>
+			<section id="tab2">
+				<h2>보고싶어요</h2>
+				<div>내용</div>
+			</section>
+			<section id="tab3">
+				<h2>내 리뷰 보기</h2>
+				<div>내용</div>
+			</section>
+			<section id="tab4">
+				<div>
+					<h2>도전과제</h2>
+					<div class="summary_container">
+						<div>
+							<p class="achievements_total_sum">0</p><!-- 중요!진행률 입력위치 -->
+							<p>달성개수</p>
+						</div>
+						<div>
+							<p class="achievements_total_rate">0</p><!-- 중요!진행률 입력위치 -->
+							<p>달성률</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="achievements_latest">
+					<h2>최근달성</h2>
+					<!-- achievements_inprogress꺼 복사해오고 가장 최근꺼 찾아서 show/hide처리 -->
+				</div>
+
+				<div class="achievements_inprogress">
+					<h2>진행중</h2>
+					<div id="achievements_everymanslover" class="achievements_container">
+						<div>
+							<img src="img/happy_light.svg"/>
+						</div>
+						<div>
+							<h3>만인의연인</h3><br>
+							<P>추천을 X개중 X개나 받으셨어요!<br>모두가 회원님을 사랑해요!</P>
+						</div>
+						<div class="achievements_rate_div">
+							<p class="achievements_rate">0</p><!-- 중요!진행률 입력위치 -->
+							<p>달성률</p>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+			<section id="tab5">
+				<h2>선호장르</h2>
+				<div>내용</div>
+			</section>
+			<section id="tab6">
+				<h2>문의게시판</h2>
+				<div>내용</div>
+			</section>
+			<section id="tab7">
+				<h2>회원정보수정</h2>
+				<div>내용</div>
+			</section>
+		</article>
+	</main>
+	
+	<footer>
+	<!-- 풋터 -->
+	</footer>
+	
+</body>
+</html>

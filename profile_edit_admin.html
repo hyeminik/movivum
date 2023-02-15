@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/profile_edit.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./js/profile_edit.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div class="portrait">
+            <img src="img/User_cicrle_light.svg" alt="유저이미지" width="150" />
+            <button>이미지 삭제</button>
+        </div>
+        <div class="profile">
+            <div class="profile_info">
+                <h2>프로필 정보</h2>
+                <div class="row">
+                    <div class="half_row">
+                        <label for="nickname">닉네임</label>
+                        <input type="text" id="nickname" placeholder="닉네임" autofocus>
+                        <p id="error_text_nickname">닉네임은 최소 2자, 최대 20자까지 입력이 가능해요</p>
+                    </div>
+                    <div class="half_row">
+                        <label for="status">상태</label>
+                        <select id="status">
+                            <option>영구 정지</option>
+                            <option>댓글 금지</option>
+                            <option>회원 탈퇴</option>
+                            <option>휴면 계정</option>
+                            <option>계정 잠금</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row self_intro">
+                    <label for="self_intro">자기소개</label>
+                    <textarea id="self_intro" rows="3">관련정보가 없습니다 여기에 자기소개 해보세요</textarea>
+                </div>
+            </div>
+
+            <div class="personal_info">
+                <h2>개인 정보</h2>
+                <div class="row">
+                    <div class="half_row">
+                        <label for="user_id">아이디</label>
+                        <input type="text" id="user_id" placeholder="user ID" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="half_row">
+                        <label for="user_name">이름</label>
+                        <input type="text" id="user_name" placeholder="이름">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="half_row">
+                        <label for="user_birth">생년월일</label>
+                        <input type="date" id="birthdate" placeholder="생년월일">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="half_row">
+                        <label for="user_password">비밀번호</label>
+                        <input type="password" id="user_password" placeholder="비밀번호">
+                        <p id="error_text_password">필수 입력사항이에요</p>
+                    </div>
+
+                    <div class="half_row">
+                        <label for="password_check">비밀번호 확인</label>
+                        <input type="password" id="password_check" placeholder="비밀번호 확인">
+                        <p id="error_text_passcheck">필수 입력사항이에요</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_container">
+                <input type="reset" value="취소">
+                <input type="submit" value="완료" id="submit_btn" disabled>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
