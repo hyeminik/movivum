@@ -5,30 +5,38 @@ a{text-decoration: none;}
 .content{width:100%; padding: 100px 0;}
 .content .wrap{display: flex; flex-flow: row wrap; justify-content: space-between;}
 .inner{width: 1170px; margin: 0 auto;}
-@media screen and (max-width: 1200px) {
+body{background-color: rgba(2, 4, 10);}
+@media screen and(max-width: 1200px){
     .content{padding: 120px 40px;}
     .inner{width: 100%;}
 }
+@media screen and(max-width: 768px){
+    .content{padding: 80px 40px;}
+}
+@media screen and(max-width: 640px){
+    .content{padding: 60px 20px;}
+}
 
 /* header */
-#gnb{height:60px; display: flex; justify-content: space-between; align-items: center;}
-#gnb .logo{display: block; font: bold 18px 'inherit'; color: #000;}
-#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: #f5f5f7; border-radius: 30px;}
-#gnb .search{margin-right: 5px; width: 340px; height: 25px; border: none; background-color: #f5f5f7;}
+#header{background: linear-gradient(to bottom, rgba(2, 4, 10, 0.373) 0%,rgba(0, 0, 0, 0) 100%);}
+#gnb{height: 60px; display: flex; justify-content: space-between; align-items: center;}
+#gnb .logo{display: block; font: bold 22px 'inherit'; color: #fff;}
+#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 30px;}
+#gnb .search{margin-right: 10px; width: 340px; height: 24px; border: none; background-color: transparent; color: rgba(255, 255, 255);}
 #gnb .search:active{outline: none;}
 #gnb .search:focus{outline: none;}
+#gnb .search::placeholder{color: rgba(255, 255, 255);}
 #gnb .search_icon{
-    display: inline-block; color: #888; cursor: pointer;
+    display: inline-block; color: rgba(255, 255, 255); cursor: pointer;
     font-variation-settings:
     'FILL' 0,
     'wght' 300,
     'GRAD' 0,
     'opsz' 40
 }
-#gnb .login{}
 #gnb .login_icon{
-    display: block; color: #000;
-    font-size: 35px;
+    display: block; color: rgba(255, 255, 255, 0.8);
+    font-size: 32px;
     font-variation-settings:
     'FILL' 0,
     'wght' 300,
@@ -38,24 +46,43 @@ a{text-decoration: none;}
 
 /* section */
 /* 트레일러 */
-#trailer{background-color: #ddd;}
-#trailer .inner{width: 100%; height: 500px;}
-#trailer .inner img{display: block; width: 100%;}
-#trailer .movie_info{position: relative; left: 20%; top: 50%; transform: translateY(-50%); height: 25%;  display: flex; flex-direction: column; align-items: flex-start; width: 350px;}
-#trailer .movie_story{font-size: 13px; margin: 5px 0;}
-#trailer .movie_info .more_button{display: block; width: 120px; font: 13px/35px 'inherit'; color: #000; text-align: center; border: 1px solid #000; border-radius: 20px;}
+#trailer{position: relative; top: -65px; z-index: -1; width: 100%; height: 75vh;}
+#trailer .movie_video{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; overflow: hidden;}
+#trailer .bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(2, 4, 10, 0) 0%, rgba(2, 4, 10, 0.25) 95%, rgba(2, 4, 10, 0.6) 100%);}
+#trailer .bg::before{
+    content: ''; display: block; position: absolute; left: 0; top: 0; width: 360px; height: 100%;
+    background: linear-gradient(to right, rgb(2, 4, 10) 0%, rgba(2, 4, 10, 0.8) 20%, rgba(2, 4, 10, 0) 100%); /*rgba(24, 24, 25, 0)*/
+}
+#trailer .bg::after{
+    content: ''; display: block; position: absolute; right: 0; top: 0; width: 370px; height: 100%; 
+    background: linear-gradient(to right, rgba(2, 4, 10, 0) 0%, rgba(2, 4, 10, 0.8) 80%, rgb(2, 4, 10) 100%); /*181819*/
+}
+#trailer .movie_info{position: absolute; left: 18%; top: 53%; width: 300px; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; color: #fff;}
+#trailer .movie_info .movie_title{font-size: 28px;}
+#trailer .movie_story{
+    margin: 15px 0;
+    font-size: 13px; color: #ffffffbd;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /*리뷰 글 10줄 제한*/
+    overflow: hidden;
+}
+#trailer .more_button{display: block; width: 120px; font: 14px/35px 'inherit'; cursor: pointer; z-index: 9999; color: #ffffffbd; text-align: center; background-color: rgba(255, 255, 255, 0.25); border-radius: 20px;}
+#trailer .more_button:hover{background-color: rgba(21, 21, 21, 0.893);}
 
 /* 인기순,추천순,최신순 공통 */
-.movie_wrap{width: 210px;}
-.movie_poster{margin-bottom: 5px; width: 210px; background-color: #ddd; border-radius: 5px; overflow: hidden; transition: 0.3s;}
+.title{margin-bottom: 10px; font-size: 28px; color: #f0f6fc;}
+.swiper{width: 100%; height: 100%}
+.swiper-slide{width: 218px; height: 100%; text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center;}
+.swiper-slide .movie_poster{margin-bottom: 10px; width: 100%; height: 320px; border-radius: 8px; overflow: hidden;}
 /* 포스터 이미지 사이즈 조정 */
-.movie_poster img{display: block; width: 100%; transition: 0.3s;} 
-.movie_poster img:hover{animation: scaleUp 0.3s; transform: scale(1.05);}
+.swiper-slide  .movie_poster img{display: block; width: 100%; height: 100%; transition: 0.3s;} 
+.swiper-slide  .movie_poster img:hover{animation: scaleUp 0.3s; transform: scale(1.05);}
 @keyframes scaleUp {
     0%{transform: scale(1);}
     100%{transform: scale(1.05);}
 }
-.movie_info{padding: 0 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.movie_info{padding: 0 5px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; color: #e3e3e3;}
 .movie_info .movie_title{font-size: 15px; font-weight: bold;}
 .movie_info .movie_review{font-size: 13px; display: flex; align-content: center;}
 .movie_review .star {
@@ -67,23 +94,84 @@ a{text-decoration: none;}
     'GRAD' 0,
     'opsz' 20
 }
+.movie_review .review_total{margin-left: 10px; position: relative;}
+.movie_review .review_total::after{
+    content: ''; display: block; position: absolute;
+    left: -5px; top: 2px; width: 1px; height: 60%; background-color: #a5a5a7;
+}
+/* 슬라이드 좌우 버튼 */
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: #ffffffde;
+}
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after{
+    position: absolute;
+    transition: 0.3s;
+    font-size: 50px;
+    text-shadow: -2px 3px 6px rgba(0, 0, 0, 0.309);
+}
+.swiper .swiper-button-prev::after{left: -50px;}
+.swiper .swiper-button-next::after{right: -50px;}
+
+.swiper:hover .swiper-button-prev::after,
+.swiper:hover .swiper-button-next::after{
+    transition: 0.3s;
+}
+.swiper:hover .swiper-button-prev::after{left: -5px;}
+.swiper:hover .swiper-button-next::after{right: -5px;}
 
 
 /* footer */
-#footer{padding: 30px 30px; background-color: #f5f5f7;}
-#footer .inner{}
-.left_footer{}
-.left_footer .logo>a{display: block; font: bold 18px/30px 'inherit'; color: #000;}
-.left_footer .sns{display: flex; justify-content: center;}
-.left_footer .sns li{}
-.left_footer .sns li>a{display: block; color: #000;} 
-.right_footer{font-size: 13px;}
+/* 공통 */
+#footer{background-color: #1c1d1f; color: #a5a5a7;}
+#footer .inner{padding: 30px 0;}
+#footer .wrap{display: flex; justify-content: space-between;}
+#footer .box{}
+
 #footer_gnb{display: flex;}
-#footer_gnb>li:nth-of-type(even){margin: 0 15px;}
-#footer_gnb>li>a{display: block; color: #000;}
+#footer_gnb>li{position: relative;}
+#footer_gnb>li:nth-of-type(even){margin: 0 20px;}
+#footer_gnb>li::after{
+    content: ''; display: block; position: absolute;
+    right: -10px; top: 50%; transform: translateY(-50%); width: 1px; height: 80%;background-color: #a5a5a7;
+}
+#footer_gnb>li:last-of-type::after{content: none;}
+#footer_gnb>li>a{display: block; font-size: 14px; color: #a5a5a7;}
+
+#footer .box .info{margin-top: 10px; font: 14px/22px 'inherit';}
+#footer .box .info>p>a{display: inline-block; font: bold 16px 'inherit'; color: #a5a5a7;}
+#footer .box .info>p:last-of-type{margin-top: 10px;}
+/* sns */
+
+#footer .sns{display: flex; align-items: flex-end; height: 100%;}
+#footer .sns>li{margin: 0 5px; width: 35px; height: 35px; border: 1px solid #a5a5a7; border-radius: 100%; overflow: hidden;}
+#footer .sns>li>a{display: block; font: 20px/37px 'inherit'; text-align: center; color: #a5a5a7; transition: 0.2s;}
+#footer .sns>li>a:hover{color: #1c1d1f; background-color: #a5a5a7; transition: 0.2s;}
 
 
 /* 로그인모달 */
-.bg{display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: #00000064;}
-.login_box{display: none; position: sticky; left: 50%; top: 50%; transform: translate(-50%, -50%); width:400px; border-radius: 5px; background-color: #fff;}
-.login_box .wrap{flex-direction: column; align-items: center; justify-content: center;}
+.blackbg{display: none; position: fixed; left: 0%; top: 0%; z-index: 4; width: 100%; height: 100%; background-color: #0000008f;}
+/* 로그인창 */
+.login_box{display: none; position: fixed; left: 50%; top: 50%; z-index: 5; transform: translate(-50%, -50%); border-radius: 10px;}
+.login_box .inner{width: 300px; background-color: #1b1b1b; border-radius: 10px; overflow: hidden;}
+.login_box .wrap{
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; 
+    padding: 50px 30px; width: 100%; text-align: center;
+}
+.login_closebtn{position: absolute; right: 5px; top: 5px; z-index: 5; width: 35px; height: 35px; background-color: transparent; border: none; cursor: pointer;}
+.login_closebtn img{filter: invert(0.3);}
+.login_header .logo{color: #fff;}
+.login_header>p{color: #a5a5a5;}
+.loginform{margin: 20px 0 10px;}
+.loginform input{display: block; margin: 3px 0; padding: 3px 10px; width: 200px; height: 35px; border: none; border-radius: 5px; background-color: #2f2f2f; color: #fff;}
+.loginform input:active{outline: none; border-color: #8b00ff;}
+.loginform input:focus{outline: none; border-color: #8b00ff;}
+.loginform input::placeholder{color: #888;}
+.loginform .login_btn{margin: 10px 0; display: block; width: 200px; font: 14px/40px 'inherit'; text-align: center; color: #fff; background-color: #8b00ff; border: 0; border-radius: 20px;}
+.loginform .login_btn:hover{background-color: #8c00ffbc;}
+.login_bottom{font-size: 12px; line-height: 1.5; color: #888;}
+.login_bottom .join>a{margin-left: 5px;}
+.login_bottom a{display: inline-block; color: #888;}
+.login_bottom a:hover{color: #ad49ff;}

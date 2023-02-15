@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://unpkg.com/youtube-background@1.0.14/jquery.youtube-background.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header id="header">
@@ -26,18 +30,28 @@
     </header>
     <section id="trailer" class="content">
         <div class="inner">
-            <div class=""></div>
+            <div class="movie_video">
+                <div data-vbg-autoplay="true" data-vbg-resolution="16:8" data-vbg-start-at="60" data-vbg-end-at="85" data-vbg="https://youtu.be/5V_6F0NDrkA"></div>
+                <span class="bg"></span>
+            </div>
             <div class="movie_info">
-                <p class="movie_title">영화이름</p>
-                <p class="movie_story">영화줄거리줄거리줄거리영화줄거리</p>
+                <h2 class="movie_title">샷건 웨딩</h2>
+                <p class="movie_story">달시와 톰의 행복한 결혼식이 갑자기 들이닥친 해적들로 인해 아비규환이 된다.  가족과 하객들은 모두 인질로 잡히고 달시와 톰은 이 상황을 해결하려고 동분서주하게 되는데...</p>
                 <a href="#" class="more_button">더 보기</a>
             </div>
         </div>
     </section>
+
     <section id="popular" class="content">
         <div class="inner">
             <h2 class="title">영화 인기순</h2>
-            <div class="wrap" id="popular_wrap">
+            <div class="swiper" id="slider">
+                <div class="swiper-wrapper" id="popular_wrap">
+                </div>
+                <div class="swiper-btn-wrap">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -45,29 +59,32 @@
     <section id="recommend" class="content">
         <div class="inner">
             <h2 class="title">영화 추천순</h2>
-            <div class="wrap" id="recommend_wrap">
+            <div class="swiper">
+                <div class="swiper-wrapper" id="recommend_wrap">
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
+
     <section id="recent" class="content">
         <div class="inner">
             <h2 class="title">영화 최신순</h2>
-            <div class="wrap" id="now_playing_wrap">
+            <div class="swiper">
+                <div class="swiper-wrapper" id="recent_wrap">
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
+
+
     <footer id="footer">
         <div class="inner">
             <nav class="wrap">
-                <div class="left_footer">
-                    <div class="logo"><a href="main.html">MOVIVUM</a></div>
-                    <ul class="sns">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="right_footer">
+                <div class="box">
                     <ul id="footer_gnb">
                         <li><a href="#">서비스이용약관</a></li>
                         <li><a href="#">개인정보처리방침</a></li>
@@ -75,27 +92,38 @@
                         <li><a href="#">고객센터</a></li>
                         <li><a href="#">채용정보</a></li>
                     </ul>
-                    <p>고객센터 | cs@watcha.co.kr /02-515-9985 (유료)</p>
-                    <p>제휴 및 대외 협력 | https://watcha.team/contact</p>
-                    <p>주식회사 아무개 | 대표 홍길동 | 서울특별시 서초구 강남대로 343 신덕빌딩 3층</p>
-                    <p>© 2023 by MOVIVUM, Inc. All rights reserved.</p>
+                    <div class="info">
+                        <p>고객센터 | cs@movivum.co.kr /02-515-9985 (유료)</p>
+                        <p>제휴 및 대외 협력 | https:/movivum.team/contact</p>
+                        <p>주식회사 아무개 | 대표 홍길동 | 서울특별시 서초구 강남대로 343 신덕빌딩 3층</p>
+                        <p><a href="main.html">MOVIVUM</a> © 2023 by MOVIVUM, Inc. All rights reserved.</p>
+                    </div>
                 </div>
+                <div class="box">
+                    <ul class="sns">
+                        <li><a href="#"><i class="xi-kakaotalk"></i></a></li>
+                        <li><a href="#"><i class="xi-instagram"></i></a></li>
+                        <li><a href="#"><i class="xi-share-alt"></i></a></li>
+                    </ul>
+                </div>
+
             </nav>
         </div>
     </footer>
 
     <!-- 로그인 모달 -->
-    <div class="bg"></div>
+    <div class="blackbg"></div>
     <div class="login_box">
         <div class="inner">
+            <button class="login_closebtn" type="button"><img src="img/close-outline.svg" alt=""></button>
             <div class="wrap">
                 <div class="login_header">
                     <h2 class="logo">MOVIVUM</h2>
                     <p>로그인</p>
                 </div>
-                <form method="post" name="login" action="login.jsp">
-                    <input type="text" class="id_input" placeholder="아이디">
-                    <input type="password" class="pw_input" placeholder="비밀번호">
+                <form method="post" name="loginform" class="loginform" action="login.jsp">
+                    <input type="text" class="userid" name="userid" placeholder="아이디">
+                    <input type="password" class="password" name="password" placeholder="비밀번호">
                     <button type="submit" class="login_btn">로그인</button>
                 </form>
                 <div class="login_bottom">
@@ -105,5 +133,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
