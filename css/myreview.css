@@ -10,19 +10,19 @@ a
 
 .divider_line
 {
-    height:80%;
+    height:70%;
     width:.1vw;
     border-width:0;
     color:#000;
     background-color:#000;
 }
 
-.reiview_summary
+.review_summary
 {
 	/* border: 10px solid red; */
 	width:100%;
 }
-.reiview_summary > h2
+.review_summary > h2
 {
     margin-bottom: 30px;
 }
@@ -106,7 +106,7 @@ a
 .review_card {
     background: var(--gray-light-color);
     border-radius: 10px;
-    width: 285px; height:350px;
+    width: 31.3%; height:350px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     display: flex;
@@ -114,7 +114,10 @@ a
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 30px;
-    margin-right: 15px;
+    box-sizing: content-box;
+}
+.review_card:nth-child(3n+2) {
+    margin:0 3%;
 }
 .review_card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

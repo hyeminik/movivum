@@ -6,24 +6,27 @@
 */
 //테스트용 리뷰카드 생성함수
 function test() {
-    for (var i = 0; i < 5; i++)
-        $(".wrap_review").append("<article class='review_card'></article>");
+    
+    for (var i = 0; i < 5; i++){
+        var card_num = $("article[class=review_card]").length+1; //현재 리뷰카드 갯수
+        $(".wrap_review").append("<article class='review_card'>"+card_num+"</article>");
+    }
     alert("카드갯수=  " + $("article[class=review_card]").length);
 }
 //무한스크롤(리뷰 카드 갯수 만큼 보여지는 범위 확장)
 $(function () {
     //변수선언
-    var row = 1;
-    var div_width = $(".review_card").css("width") + $(".review_card").css("margin-right"); //카드 너비(여백포함)
-    var card_row = $(".wrap_review").css("width") / div_width; //한행당 보여줄 카드 수
+    var row = 2;//현재 노출된 행
+    var card_row = 3 //한행당 보여줄 카드 수
     var card_num = $("article[class=review_card]").length; //현재 리뷰카드 갯수
     var max_row = Math.ceil(card_num / card_row); //확장 가능한 최대 행
     $(window).scroll(function () {
+        // alert("max_row"+max_row+" / row"+row)
         card_num = $("article[class=review_card]").length;
-        max_row = Math.ceil(card_num / 5); //올림 반드시 필요
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight && row + 1 < max_row) {
+        max_row = Math.ceil(card_num / card_row); //올림 반드시 필요
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight -10 && row < max_row) {//(현재 화면높이+현재Y스크롤 값) > (최대 문서높이-여유값)
             row += 1;
-            $(".wrap_review").css("height", 380 * (row + 1)); //카드 높이 및 하단여백 만큼 확장
+            $(".wrap_review").css("height", 380 * (row)); //카드 높이 및 하단여백 만큼 확장
             //alert("row:"+row+"/max_row:"+max_row+" height:"+$(".wrap_review").css("height"));
         }
     })
