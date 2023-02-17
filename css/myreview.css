@@ -114,7 +114,6 @@ a
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 30px;
-    box-sizing: content-box;
 }
 .review_card:nth-child(3n+2) {
     margin:0 3%;
