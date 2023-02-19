@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+    <html lang="ko">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/join.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/join.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </head>
+<body>
+<div class="container">
+      <div class="swiper join_swiper">
+        <div class="slide-captions"></div>
+        <div class="swiper-wrapper">
+          <!-- step1 -->
+          <div class="swiper-slide slide-1" data-title="회원가입" data-subtitle="이름과 생년월일을 입력해주세요.">
+            <form action="" name="namebirth_form" id="namebirth_form">
+              <div class="join_row">
+                  <input type="text" name="user_name" id="user_name" placeholder="이름을 입력해주세요." required>
+                  <span class="tip help"><img src="img/help-circle-outline.svg" alt="">이름은 최소 2자 이상 입력해주세요.</span>
+              </div>
+              <!-- 생년월일 -->
+              <div class="join_row">
+                  <input type="date" name="user_birth" id="user_birth" data-placeholder="생년월일을 선택해주세요." required>
+                  <span class="tip alert"><img src="img/alert-circle-outline.svg" alt="">만 14세 미만은 가입할 수 없습니다.</span>
+              </div>
+            </form>
+          </div>
+          <!-- step2 -->
+          <div class="swiper-slide slide-2" data-title="회원가입" data-subtitle="아이디와 비밀번호를 입력해주세요.">
+            <!-- 아이디 -->
+            <form action="" id="idpw_form" name="idpw_form">
+              <div class="join_row">
+                <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력해주세요.">
+                <span class="tip help"><img src="img/help-circle-outline.svg" alt="">5~20자의 영문 소문자,숫자,특수기호(_),(-)만 사용 가능합니다.</span>
+              </div>
+                <!-- 비밀번호 -->
+                <div class="join_row">
+                  <input type="password" name="user_password" id="user_password" placeholder="비밀번호를 입력해주세요.">
+                  <span class="tip help"><img src="img/help-circle-outline.svg" alt="">8~20자 이내로 영문 대소문자,숫자, 특수문자 중 3가지 이상을 혼용하여 입력해주세요.</span>
+              </div>
+              <!-- 비밀번호 확인 -->
+              <div class="join_row">
+                <input type="password" name="password_check" id="password_check" placeholder="비밀번호를 한 번 더 입력해주세요.">
+                <span class="tip alert"><img src="img/alert-circle-outline.svg" alt="">비밀번호가 일치하지 않습니다. 다시 입력해주세요.</span>
+              </div>
+            </form>
+          </div>
+          <!-- step3 -->
+          <div class="swiper-slide slide-3"data-title="회원가입" data-subtitle="닉네임과 프로필 사진을 설정해주세요.">
+            <form action="" id="nickpic_form" name="nickpic_form">
+              <!-- 프로필 이미지 선택 -->
+              <div class="user_pic">
+                <div class="pic"><img src="img/default_pic.png" alt=""></div>
+                <!-- https://www.freepik.com/free-vector/avatars-set-with-people-face-social-media-profile-app-vector-flat-collection-men-women-heads-circle-frame-female-male-characters-portraits-with-different-hairstyle_22445017.htm#query=default%20avatar&position=6&from_view=keyword&track=ais Image by upklyak on Freepik -->
+                <div class="btn_wrap">
+                    <button type="button" class="changebtn" name="changebtn">변경</button>
+                    <button type="button" class="deletebtn" name="deletebtn">삭제</button>
+                </div>
+              </div>
+            <!-- 닉네임 -->
+            <div class="join_row">
+              <input type="text" name="user_nickname" id="user_nickname" placeholder="닉네임을 입력해주세요.">
+            </div>
+          </form>
+          </div>
+          <!-- step4 -->
+          <div class="swiper-slide slide-4" data-title="회원가입" data-subtitle="좋아하는 장르를 선택해주세요.">
+              <div class="inner">
+                <div class="wrap">
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/ghost.png" alt=""></div>
+                      <span class="icon_title">공포</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/hearts.png" alt=""></div>
+                      <span class="icon_title">로맨스</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/ufo.png" alt=""></div>
+                      <span class="icon_title">SF</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/crime-scene.png" alt=""></div>
+                      <span class="icon_title">범죄</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/search.png" alt=""></div>
+                      <span class="icon_title">추리</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/magic-wand.png" alt=""></div>
+                      <span class="icon_title">판타지</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/question-mark.png" alt=""></div>
+                      <span class="icon_title">미스터리</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/smile.png" alt=""></div>
+                      <span class="icon_title">코미디</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
+                      <span v>스릴러</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/swords.png" alt=""></div>
+                      <span class="icon_title">전쟁</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/emotions.png" alt=""></div>
+                      <span class="icon_title">드라마</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/sport.png" alt=""></div>
+                      <span class="icon_title">스포츠</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/graduation.png" alt=""></div>
+                      <span class="icon_title">학원물</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/cat.png" alt=""></div>
+                      <span class="icon_title">애니메이션</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/megaphone.png" alt=""></div>
+                      <span class="icon_title">액션</span>
+                  </div>
+                  <div class="box">
+                      <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
+                      <span class="icon_title">뮤지컬</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev">이전</div>
+        <div class="swiper-button-next">다음</div>
+        <div class="swiper-pagination"></div>
+      </div>
+  </div>
+</body>
+<script>
+</script>
+</html>
