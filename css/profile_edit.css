@@ -3,6 +3,25 @@
 	margin:0;/*바깥 여백*/
 	padding:auto;/*안쪽 여백*/
 }
+:root{
+    /* 색상 */
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --gray-dark-color:#D9D9D9;
+    --gray-light-color:#F4F4F4;
+  
+    /* 사이즈 */
+    --padding: 12px;
+    --avatar-size:50px;
+    
+    /* 폰트사이즈*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
 
 form
 {

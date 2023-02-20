@@ -5,7 +5,26 @@
 }
 a
 {
-	color: black;
+	color: var(--black-color);;
+}
+:root{
+    /* 색상 */
+    --white-color:#fff;
+    --black-color:#000;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --gray-dark-color:#D9D9D9;
+    --gray-light-color:#F4F4F4;
+  
+    /* 사이즈 */
+    --padding: 12px;
+    --avatar-size:50px;
+    
+    /* 폰트사이즈*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
 }
 
 .divider_line
@@ -13,8 +32,8 @@ a
     height:70%;
     width:.1vw;
     border-width:0;
-    color:#000;
-    background-color:#000;
+    color:var(--black-color);
+    background-color:var(--black-color);;
 }
 
 .review_summary
@@ -33,7 +52,7 @@ a
 	justify-content: space-around;
     align-items: center;
 	text-align: center;
-	background-color: #F4F4F4;
+	background-color: var(--gray-light-color);
 }
 .summary_container
 {
@@ -41,7 +60,7 @@ a
 	display: flex;
 	justify-content: space-around;
     align-items: center;
-	background-color: #F4F4F4;
+	background-color: var(--gray-light-color);
 	border-radius: 10px;
 	height: 150px;
 	margin-top: 10px;
@@ -74,31 +93,33 @@ a
 	font-weight: 1000;
 }
 
-:root{
-    /* 색상 */
-    --white-color:#fff;
-    --black-color:#140a00;
-    --blue-color:#045fd4;
-    --red-color:#ff0000;
-    --gray-dark-color:#D9D9D9;
-    --gray-light-color:#F4F4F4;
-  
-    /* 사이즈 */
-    --padding: 12px;
-    --avatar-size:50px;
-    
-    /* 폰트사이즈*/
-    --font-large: 18px;
-    --font-medium: 14px;
-    --font-small: 12px;
-    --font-micro: 10px;
+.wrap_search{
+    display: flex;
+    margin-top: 10px;
+}
+.search_box{
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+.search_box>input{
+    width: 0px;
+    height: 40px;
+    border: 0px solid;
+    transition: 0.3s;
+}
+.search_box>input:focus{
+    width: 200px;
+    transform-origin: 0% 0%;
+    transition: 0.3s;
 }
 
 .wrap_review {
+    /* border: 10px solid red; */
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 750px;
     overflow: hidden;
     width:100%;

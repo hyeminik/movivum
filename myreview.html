@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/myreview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./js/myreview.js"></script>
     <title>Document</title>
@@ -46,9 +47,17 @@
             <a href="#"><u>지금 작성하러 가기</u></a>
         </div>
     </div> -->
-    <button onclick="test();">test</button>
+    
+    <div class="wrap_search">
+        <form action="" class="search_box">
+            <label for="search_text"><i class="fas fa-search"></i></label>
+            <input type="search" placeholder="검색" id="search_text">
+        </form>
+        
+        <button onclick="test();">test</button>
+    </div>
 
-    <div class="wrap_review">
+    <div class="wrap_review">    
         <article class="review_card">
             <!-- 리뷰1행 -->
             <div class="user_wrap">
