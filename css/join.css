@@ -12,7 +12,7 @@ body{width: 100%; height: 100%; background-color: rgba(2, 4, 10);}
 .container{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); transition: 0.5s;}
 .join_swiper{width: 400px; height: 460px;  background-color: #1b1b1b; transition: 0.5s;}
 .swiper-slide{position: relative; margin-top: 110px; width: 100%; display: flex; justify-content: center; align-items: center;}
-.swiper-wrapper form{padding: 10px 60px 0;}
+.swiper-wrapper form{padding: 10px 60px;}
 /* Slide captions */
 .slide-captions{position: absolute; top: 50px; left: 60px; color: #fff; z-index: 999;}
 .slide-captions .current-title{font-size: 20px;}
@@ -53,14 +53,14 @@ body{width: 100%; height: 100%; background-color: rgba(2, 4, 10);}
 
 /* step4 */
 .slide-4 .inner{margin: 0 auto; width: 340px; border: 1px silid blue;}
-.slide-4 .wrap{ display: flex; flex-flow: row wrap; justify-content: center; align-items: center;}
+.slide-4 .wrap{border: 1px solid red; display: flex; flex-flow: row wrap; justify-content: center; align-items: center;}
 .slide-4 .box{margin: 0 5px 5px 0; width: 70px; height: 70px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #a5a5a5; border-radius: 8px; background-color: transparent;}
 .slide-4 .box .icon{width: 25px; margin-bottom: 5px;}
 .slide-4 .box .icon_title{font: 13px 'inherit'; color: #a5a5a5;}
 .slide-4 .box .icon img{display: block; width: 100%; 
     filter: invert(79%) sepia(2%) saturate(0%) hue-rotate(158deg) brightness(84%) contrast(88%);}
-    /* filter: invert(54%) sepia(18%) saturate(0%) hue-rotate(250deg) brightness(96%) contrast(84%);} */
 .slide-4 .box:nth-of-type(4n){margin-right: 0;}
+.slide-4 .box:nth-of-type(n+13){margin-bottom: 0;}
 /* clicked genre button */
 .slide-4 .box.clicked{border: 1px solid #B983FF; box-shadow: 0px 0px 2px #B983FF;}
 .slide-4 .box.clicked .icon_title{color: #B983FF;}
@@ -68,21 +68,40 @@ body{width: 100%; height: 100%; background-color: rgba(2, 4, 10);}
 .swiper-pagination-progressbar-fill{border: 2px solid #B983FF; border-radius: 0px;}
 .swiper-pagination-progressbar{background-color: #B983FF; border-radius: 0px;}
 
-/* slide-0 이용약관동의 */
-.checker>li{font-size: 12px; color: #a5a5a5; display: flex;}
+/* slide-1 이용약관동의 */
+.checker>li{color: #a5a5a5;}
 .checker input{margin-right: 3px;}
 input[type="checkbox"]{display: none;}
 label::before {
     content: '';
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-image: url('../img/unchecked.svg');
     margin-right: 3px;
     vertical-align:middle;
     filter: invert(74%) sepia(14%) saturate(9%) hue-rotate(328deg) brightness(87%) contrast(89%);
 }
-
+label{font-size: 12px;}
 input[type="checkbox"]:checked + label::before {
     background-image: url('../img/checked.svg');
+    filter: invert(62%) sepia(33%) saturate(4645%) hue-rotate(221deg) brightness(102%) contrast(101%);
+}
+
+/* slide-5 */
+.slide-5 .welcome_txt{text-align: center; color: #a5a5a5; height: 100%;}
+.wrapper{width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.checkmark{margin: 80px auto 20px; width: 50px; height: 50px; border-radius: 50%; display: block; stroke-width: 2; stroke: #fff; stroke-miterlimit: 10; box-shadow: inset 0px 0px 0px #B983FF; animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}
+.checkmark__circle{stroke-dasharray: 166; stroke-dashoffset: 166; stroke-width: 2; stroke-miterlimit: 10; stroke: #B983FF; fill: none; animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+.checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48; animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}
+@keyframes stroke{
+    100%{stroke-dashoffset: 0}
+}
+@keyframes scale{
+    0%, 100%{transform: none}
+    50%{transform: scale3d(1.1, 1.1, 1)}
+}
+    
+@keyframes fill{
+    100%{box-shadow: inset 0px 0px 0px 30px #B983FF}
 }

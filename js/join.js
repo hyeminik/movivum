@@ -22,13 +22,18 @@ $(function(){
                 $('.join_swiper').css('height','500px');
                 $('.swiper .swiper-button-prev').css('top','470px');
                 $('.swiper .swiper-button-next').css('top','470px');
-                $('.swiper-button-next').text("완료");
             }else if((swiper.realIndex!=3)){
-                $('.swiper-button-next').text("다음");
                 $('.join_swiper').css('height','460px');
                 $('.swiper .swiper-button-prev').css('top','430px');
                 $('.swiper .swiper-button-next').css('top','430px');
 
+            }
+            if(swiper.realIndex==4){
+                $('.swiper-button-next').text("완료");
+                $('.checkmark').show();
+            }else if((swiper.realIndex!=4)){
+                $('.swiper-button-next').text("다음");
+                $('.checkmark').hide();
             }
         }
         }
