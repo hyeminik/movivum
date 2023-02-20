@@ -19,15 +19,15 @@ $(function(){
             });
 
             if(swiper.realIndex==3){
-                $('.join_swiper').css('height','550px');
-                $('.swiper .swiper-button-prev').css('top','520px');
-                $('.swiper .swiper-button-next').css('top','520px');
+                $('.join_swiper').css('height','500px');
+                $('.swiper .swiper-button-prev').css('top','470px');
+                $('.swiper .swiper-button-next').css('top','470px');
                 $('.swiper-button-next').text("완료");
             }else if((swiper.realIndex!=3)){
                 $('.swiper-button-next').text("다음");
-                $('.join_swiper').css('height','450px');
-                $('.swiper .swiper-button-prev').css('top','420px');
-                $('.swiper .swiper-button-next').css('top','420px');
+                $('.join_swiper').css('height','460px');
+                $('.swiper .swiper-button-prev').css('top','430px');
+                $('.swiper .swiper-button-next').css('top','430px');
 
             }
         }
@@ -40,4 +40,14 @@ $(function(){
     $(".slide-captions").html(function() {
         return "<h2 class='current-title'>" + sizes1 + "</h2>" + "<h4 class='current-subtitle'>"+"<span class='step'>step"+(swiper.realIndex+1)+".&nbsp;</step>"+ sizes2 + "</h4>";
     });
+
+    // 선호장르 선택/선택해제
+    $('.slide-4 .box').click(function(){
+        $(this).toggleClass('clicked');
+    })
+
+    // // 약관동의
+    // $('#checkAll').click(function(){
+    //     $('#checkService, #checkTerms').toggleClass('checked');
+    // })
 })
