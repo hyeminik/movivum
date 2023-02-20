@@ -1,0 +1,161 @@
+/* CSS Basic layout */
+*{margin : 0; padding: 0; box-sizing: border-box;}
+*::before,*::after{margin : 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;}
+a {text-decoration: none;} 
+
+/*1200px 기준*/
+.content{width: 100%; padding: 150px 0;}
+.content .wrap{display: flex; flex-flow: row wrap; justify-content: space-between;}
+.inner{width: 1170px; margin: 0 auto;}
+@media screen and(max-width: 1200px){
+.content{padding: 120px 40px;}
+.inner{width: 100%;}
+}
+@media screen and(max-width: 768px){
+.content{padding: 80px 40px;}
+}
+@media screen and(max-width: 640px){
+.content{padding: 60px 20px;}
+}
+
+:root{
+    /* 색상 */
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --gray-dark-color:#D9D9D9;
+    --gray-light-color:#F4F4F4;
+
+    /* 사이즈 */
+    --padding: 12px;
+    --avatar-size:50px;
+    
+    /* 폰트사이즈*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+/*header_프로필 섹션*/
+.profile {
+    width: 100%; height: 350px;
+    padding-top: 25px;
+    border-top: 0.5px solid var(--gray-dark-color); /*경게가 안보여서리*/
+}
+.profile>.inner {
+    display: flex;
+    align-content: center;
+    padding: 0 calc(var(--padding)*2);
+}
+.profile_wrap {
+    display: flex;
+    justify-content:flex-start;
+}
+.profile .avatar {
+    width: 210px; height: 250px;
+    border-radius: 3px; overflow: hidden;
+    display: block;
+    background: var(--gray-dark-color);
+}
+.avatar_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 calc(var(--padding)*2);
+}
+.avatar_info> div {
+    padding: var(--padding) 0px;
+}
+
+/* header_프로필 좋아요 */
+.like_wrap {
+    border: 0.5px solid var(--gray-dark-color);
+    width: 100%; height: 50px;
+    margin: 0 auto; 
+    margin-top: 25px;
+    text-align: center;
+    font-size: var(--font-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.like_btn {
+    border: none;
+}
+.like_btn> i {
+    font-size: var(--font-large);
+}
+.like_text {
+    font-size: var(--font-medium);
+}
+
+/*main_필모그래피 섹션*/
+.content {
+    padding-top: 100px;
+}
+.filmo_movie {
+    width: 100%;
+    margin-bottom: calc(var(--padding));
+}
+.upper{
+    margin: 0 500;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.filmo_box {
+    display: flex;
+    width: 45%; height: 45%;
+    margin: calc(var(--padding)*3) 29px;
+}
+.movie_poster {
+    width: 220px; height: 322px; /*기존포스터 -50px*/
+    border-radius: 3px; overflow: hidden;
+    background: var(--gray-dark-color);
+    display: block;
+}
+.movie_info> div {
+    padding: var(--padding);
+}
+.movie_name {
+    font-size: var(--font-large);
+}
+
+
+/* header */
+#gnb{height:60px; display: flex; justify-content: space-between; 
+    align-items: center;}
+#gnb .logo{display: block; font: bold 18px 'inherit'; color: #000;}
+#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: #f5f5f7; border-radius: 30px;}
+#gnb .search{margin-right: 5px; width: 340px; height: 25px; border: none; background-color: #f5f5f7;}
+#gnb .search:active{outline: none;}
+#gnb .search:focus{outline: none;}
+#gnb .search_icon{
+    display: inline-block; color: #888; cursor: pointer;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}
+#gnb .login_icon{
+    display: block; color: #000;
+    font-size: 35px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
+}
+  /* footer */
+    #footer{padding: 30px 30px; background-color: #f5f5f7;}
+    .left_footer .logo>a{display: block; font: bold 18px/30px 'inherit'; color: #000;}
+    .left_footer .sns{display: flex; justify-content: center;}
+    .left_footer .sns li>a{display: block; color: #000;} 
+    .right_footer{font-size: 13px;}
+    #footer_gnb{display: flex;}
+    #footer_gnb>li:nth-of-type(even){margin: 0 15px;}
+    #footer_gnb>li>a{display: block; color: #000;}
