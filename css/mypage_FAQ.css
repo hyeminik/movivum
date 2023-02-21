@@ -125,11 +125,13 @@ a {text-decoration: none;}
     flex: 100%;
     max-width: 50%; /*한줄당 블럭개수 조정*/
     justify-content: center;
-    padding: var(--padding);
+    
     box-shadow: 0 0 2px;;
 }
 .blocks_item_link{
     color: var(--black-color);
+    font-size: var(--font-large);
+    padding:calc(var(--padding)*2);
 }
 
 /*호러블테러블 답변블록*/
@@ -157,11 +159,17 @@ a {text-decoration: none;}
     padding-right: var(--padding);
     color: gray;
 }
+/*js 탭메뉴*/
+.blocks_item>.selected {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor:pointer;
+}
 
+/* js 토글메뉴 */
 .faq_answer_list_answer {
     display: none;
 }
-
 .seebtn {
     display: block;
 }
