@@ -1,0 +1,13 @@
+*/*공통사항*/
+{
+	margin:0;/*바깥 여백*/
+	padding:0;/*안쪽 여백*/
+}
+p{
+    margin-bottom: 10px;
+}
+.wrap{width: 620px; overflow: hidden; border: 1px black solid;}
+.box{box-sizing: border-box; margin-bottom:5px; width: 150px; height: 150px; border: 1px solid black; border-radius: 8px; background-color: transparent;}
+.icon{width: 40px;  margin: auto }
+.icon_title{font: 13px 'inherit'; color: black;}
+.icon img{display: block; width: 100%;}

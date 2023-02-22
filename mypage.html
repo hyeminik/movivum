@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/mypage.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./js/mypage.js"></script>
 	<script src="https://kit.fontawesome.com/5ff835e817.js" crossorigin="anonymous"></script>
     <title>마이페이지</title>
 </head>
+<style>
+	</style>
 <body>
 	<header>
 	<!-- 네비게이터 -->
@@ -30,43 +33,28 @@
 	<!-- 메인영역 -->
 	<main>
 		<aside class="sidebar">
-			<ul><!-- #none속성안 붙이면 누를때마다 화면스크롤됨 -->
-				<li><a href="#tab1,#none" class="selected"><img src="img/Home_light.svg"/>마이홈</a></li>
-				<li><a href="#tab2,#none"><img src="img/Favorite_light.svg"/>보고싶어요</a></li>
-				<li><a href="#tab3,#none"><img src="img/Chat_light.svg"/>내 리뷰 보기</a></li>
-				<li><a href="#tab4,#none"><img src="img/lightning_light.svg"/>도전과제</a></li>
-				<li><a href="#tab5,#none"><img src="img/Ticket_use_light.svg"/>선호장르</a></li>
-				<li><a href="#tab6,#none"><img src="img/Message_light.svg"/>문의게시판</a></li>
-				<li><a href="#tab7,#none"><img src="img/Setting_line_light.svg"/>회원정보수정</a></li>
+			<ul>
+				<li><a href="#tab1" class="selected"><span class="material-symbols-rounded">home</span>마이홈</a></li>
+				<li><a href="#tab2"><span class="material-symbols-rounded">favorite</span>보고싶어요</a></li>
+				<li><a href="#tab3"><span class="material-symbols-rounded">chat</span>내 리뷰 보기</a></li>
+				<li><a href="#tab4"><span class="material-symbols-rounded">bolt</span>도전과제</a></li>
+				<li><a href="#tab5"><span class="material-symbols-rounded">confirmation_number</span>선호장르</a></li>
+				<li><a href="#tab6"><span class="material-symbols-rounded">mail</span>문의게시판</a></li>
+				<li><a href="#tab7"><span class="material-symbols-rounded">settings</span>회원정보수정</a></li>
 			</ul>
+			
+			<!-- <ul>
+				<li><a href="#tab1" class="selected"><img src="img/Home_light.svg"/>마이홈</a></li>
+				<li><a href="#tab2"><img src="img/Favorite_light.svg"/>보고싶어요</a></li>
+				<li><a href="#tab3"><img src="img/Chat_light.svg"/>내 리뷰 보기</a></li>
+				<li><a href="#tab4"><img src="img/lightning_light.svg"/>도전과제</a></li>
+				<li><a href="#tab5"><img src="img/Ticket_use_light.svg"/>선호장르</a></li>
+				<li><a href="#tab6"><img src="img/Message_light.svg"/>문의게시판</a></li>
+				<li><a href="#tab7"><img src="img/Setting_line_light.svg"/>회원정보수정</a></li>
+			</ul> -->
 		</aside>
 		<article>
 			<section id="tab1">
-				<h2>마이홈</h2>
-				<div>
-					<i class="fas fa-sharp fa-solid fa-user"></i>
-					<i class="fas fa-thin fa-face-smile-hearts"></i>
-					
-				</div>
-			</section>
-			<section id="tab2">
-			</section>
-			<section id="tab3">
-				<jsp:include page="myreview.html"/>
-			</section>
-			<section id="tab4">
-				<jsp:include page="achivement.html"/>
-			</section>
-			<section id="tab5">
-				<h2>선호장르</h2>
-				<div>내용</div>
-			</section>
-			<section id="tab6">
-				<h2>문의게시판</h2>
-				<div>내용</div>
-			</section>
-			<section id="tab7">
-				<jsp:include page="profile_edit_user.html"/>
 			</section>
 		</article>
 	</main>

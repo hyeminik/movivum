@@ -119,6 +119,7 @@ a
     margin-top: 10px;
     height: 750px;
     overflow: hidden;
+    width:100%;
 }
 .review_card {
     background: var(--gray-light-color);

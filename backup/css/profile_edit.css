@@ -1,0 +1,149 @@
+*/*공통사항*/
+{
+	margin:0;/*바깥 여백*/
+	padding:auto;/*안쪽 여백*/
+}
+:root{
+    /* 색상 */
+    --white-color:#fff;
+    --black-color:#140a00;
+    --blue-color:#045fd4;
+    --red-color:#ff0000;
+    --gray-dark-color:#D9D9D9;
+    --gray-light-color:#F4F4F4;
+  
+    /* 사이즈 */
+    --padding: 12px;
+    --avatar-size:50px;
+    
+    /* 폰트사이즈*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+form
+{
+	/*border: 10px solid black;*/
+    display: flex;
+    width:100%;
+    padding: 10px;
+}
+.portrait
+{
+	/* border: 10px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: auto;
+    margin-right: 30px;
+}
+.profile
+{
+	/*border: 10px solid black;*/
+    width:100%;
+    padding: 10px;
+}
+.profile_info h2
+{
+    margin-bottom: 30px;
+}
+.profile_info
+{
+	/*border: 10px solid green;*/
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+#error_text_nickname,#error_text_password,#error_text_passcheck
+{
+    font-size:12px;
+    color: grey;
+}
+
+.personal_info h2{
+    margin-bottom: 30px;
+}
+.personal_info
+{
+	/* border: 10px solid blue; */
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.row
+{
+    /* border: 1px solid brown; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.row>.half_row
+{
+    /* border: 1px solid purple; */
+    width: 48%;
+}
+label
+{
+	/* border: 10px solid goldenrod; */
+    display: block;
+    margin-bottom: 10px;
+}
+.self_intro
+{
+	/*border: 10px solid red;*/
+    flex-direction: column;
+    width: 100%;
+}
+textarea
+{   
+    /*border: 10px solid goldenrod;*/
+    width: 100%;
+    border: 1px solid #ddd; border-radius: 5px; resize: none;
+    box-sizing: border-box;
+}
+
+#status{
+    width: 100%;
+    height: 44px;/*select박스는 크기조정이 다른태그랑 다른듯*/
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input
+{ width: 100%; height: 40px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;}
+
+div.btn_container
+{
+    /* border: 10px solid goldenrod; */
+    width: 100%;
+    display: flex;
+	justify-content: flex-end;
+}
+div.btn_container>input
+{
+    width: 100px;
+    border:0;
+    background-color: #11ffee00;
+}
+div.btn_container>input.delete
+{
+    margin-right: auto;
+    color: red;
+}
+.portrait>button
+{
+    height: 40px;
+    border: 1px solid black;
+    background-color: #11ffee00;
+    border-radius: 20px;
+    margin: 5px;
+}
+#submit_btn
+{
+    font-weight: bold;
+}

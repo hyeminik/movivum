@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mypage.css">
+    <link rel="stylesheet" href="./css/myreview.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5ff835e817.js" crossorigin="anonymous"></script>
+    <title>마이페이지</title>
+</head>
+
+<body>
+	<header>
+		<!-- 네비게이터 -->
+
+		<!-- 배너영역 -->
+		<section class="banner">
+			<jsp:include page="banner.html"></jsp:include>
+		</section>
+		<header>
+
+			<!-- 메인영역 -->
+			<main>
+				<aside class="sidebar">
+					<jsp:include page="aside.html"></jsp:include>
+				</aside>
+                <article>
+                    <section id="tab3">
+
+                        <div class="review_summary">
+                            <h2>내 리뷰 보기</h2>
+
+                            <div class="summary_container">
+                                <div>
+                                    <p class="review_total_sum">0</p><!-- 중요!진행률 입력위치 -->
+                                    <p>별점 준 수</p>
+                                </div>
+                                <hr class="divider_line">
+                                <div>
+                                    <p class="review_total_rate">0</p><!-- 중요!진행률 입력위치 -->
+                                    <p>총 평균</p>
+                                </div>
+                                <hr class="divider_line">
+                                <div class="review_rate_1">
+                                    <p class="review_rate">0</p><!-- 중요!진행률 입력위치 -->
+                                    <p>장르1</p>
+                                </div>
+                                <div class="review_rate_2">
+                                    <p class="review_rate">0</p><!-- 중요!진행률 입력위치 -->
+                                    <p>장르2</p>
+                                </div>
+                                <div class="review_rate_3">
+                                    <p class="review_rate">0</p><!-- 중요!진행률 입력위치 -->
+                                    <p>장르3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div id="review_empty" class="review_container">
+        <div>
+            <h1>최근달성한 리뷰가 없어요 XD</h1><br>
+            <a href="#"><u>지금 작성하러 가기</u></a>
+        </div>
+    </div> -->
+
+                        <div class="wrap_search">
+                            <form action="" class="search_box">
+                                <label for="search_text"><i class="fas fa-search"></i></label>
+                                <input type="search" placeholder="영화제목, 내용, 작성일" id="search_text">
+                            </form>
+
+                            <button onclick="test();">test</button>
+                        </div>
+
+                        <div class="wrap_review">
+                            <article class="review_card">
+                                <!-- 리뷰1행 -->
+                                <div class="user_wrap">
+                                    <span class="">
+                                        <span><img class="user_picture" src="1.jpg"></span>
+                                        <span class="nickname">닉네임</span>
+                                    </span>
+                                    <span class="dropdown">
+                                        <a href="#" class="more">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <div class="submenu">
+                                                <a href="#" class="modi">수정</a>
+                                                <a href="#" class="del">삭제</a>
+                                            </div>
+                                        </a>
+                                    </span>
+                                </div>
+                                <!-- 리뷰2행 -->
+                                <div class="grade_wrap">
+                                    <span><b>영화제목: CSS는 어려워</b></span>
+                                    <span class="star"><i class="fas fa-regular fa-star"></i>&nbsp;5.0</span>
+                                </div>
+                                <!-- 리뷰3행 -->
+                                <div class="content_wrap">
+                                    나중에 텍스트 끌어오는 거 할때,
+                                    몇글자여야 잘리지? 지금 텍스트를 여기 넣으면 밑도 끝도 없이 글이 길어지는데 어떻게 제한을 둘까?
+                                    여기 400px*400px인데 나중에 텍스트 끌어오는 거 할때,
+                                    몇글자여야 잘리지? 지금 텍스트를 여기 넣으면 밑도 끝도 없이 글이 길어지는데 어떻게 제한을 둘까?여기 400px*400px인데 나중에 텍스트 끌어오는
+                                    거 할때,
+                                    몇글자여야 잘리지? 지금 텍스트를 여기 넣으면 밑도 끝도 없이 글이 길어지는데 어떻게 제한을 둘까?여기 400px*400px인데 나중에 텍스트 끌어오는
+                                    거 할때,
+                                </div>
+                                <!-- 리뷰4행 -->
+                                <div class="bottom_wrap">
+                                    <span><i class="fa-regular fa-thumbs-up"></i>&nbsp;nn</span>
+                                    <span>작성일자</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </article>
+            </main>
+
+            <footer>
+                <!-- 풋터 -->
+            </footer>
+
+</body>
+
+</html>

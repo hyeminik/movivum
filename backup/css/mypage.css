@@ -36,14 +36,13 @@ ul {list-style:none;}/*마크없애기*/
 .banner
 {
   	background-color:var(--gray-light-color);
-  	width: 100%;
+  	width: auto;
   	height: 300px;
     display: flex;
     justify-content: center;
 }
 .banner>div
 {
-	/*border: 10px solid red;*/
 	position:relative;
     max-width:500px;
     display: flex;
@@ -108,13 +107,13 @@ a.selected span.material-symbols-rounded
 	'opsz' 48
 }
 
-article
+main > article
 {	
-	/* border: 10px solid blue; */
 	width:100%;
 }
 article > section
 {
+	margin: 30px auto;
 	padding: 30px;
 }
 

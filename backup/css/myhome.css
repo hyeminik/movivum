@@ -5,12 +5,20 @@
 }
 a
 {
-	color: var(--black-color);;
+	color: var(--black-color);
+}
+.divider_line
+{
+    height:80%;
+    width:.1vw;
+    border-width:0;
+    color:var(--black-color);
+    background-color:var(--black-color);
 }
 :root{
     /* 색상 */
     --white-color:#fff;
-    --black-color:#000;
+    --black-color:#140a00;
     --blue-color:#045fd4;
     --red-color:#ff0000;
     --gray-dark-color:#D9D9D9;
@@ -27,103 +35,53 @@ a
     --font-micro: 10px;
 }
 
-.divider_line
+section>div
 {
-    height:70%;
-    width:.1vw;
-    border-width:0;
-    color:var(--black-color);
-    background-color:var(--black-color);;
+	margin-bottom:50px;
 }
-.fa-search{
-    cursor: pointer;
-}
-.review_summary
+section>div>h2
 {
-	width:100%;
-}
-.review_summary > h2
-{
-    margin-bottom: 30px;
-}
-#review_empty
-{
-	height: 400px;
-	display: flex;
-	justify-content: space-around;
-    align-items: center;
-	text-align: center;
-	background-color: var(--gray-light-color);
+	margin-bottom: 30px;
 }
 .summary_container
 {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
     align-items: center;
 	background-color: var(--gray-light-color);
 	border-radius: 10px;
 	height: 150px;
-	margin-top: 10px;
 }
 .summary_container > div
 {
 	width: 100px;
-	font-weight: 500; 
-	display: flex;
-    align-items: center;
-    flex-direction: column;
+	margin:40px;
+	text-align: center;    
 }
-.summary_container > div > .review_total_sum,.review_total_rate
+.summary_container > div > .achievements_total_sum, .achievements_total_rate
 {
 	font-size: 60px;
-	font-weight: 500;
+	font-weight: bolder;
 }
-.summary_container > div > .review_rate
+.summary_container > div> .achievements_total_rate::after
 {
-	font-size: 60px;
-	font-weight: 500;
-}
-.summary_container > div.review_rate_1 > .review_rate
-{
-	font-size: 60px;
-	font-weight: 1000;
-}
-
-.wrap_search{
-    display: flex;
-    margin-top: 10px;
-}
-.search_box{
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-left: auto;
-}
-.search_box>input{
-    width: 0px;
-    height: 40px;
-    border: 0px solid;
-    transition: 0.3s;
-    padding: 0 10px;
-}
-.search_box>input:focus{
-    width: 200px;
-    transform-origin: 0% 0%;
-    transition: 0.3s;
+	content:"%";
+	font-size: 30px;
 }
 
 .wrap_review {
-    /* border: 10px solid red; */
     display: flex;
     flex-flow: wrap;
     justify-content: flex-start;
-    margin-top: 10px;
-    height: 750px;
+    height: 400px;
     overflow: hidden;
+    padding: 5px;
 }
 .review_card {
     background: var(--gray-light-color);
     border-radius: 10px;
-    width: 31.3%; height:350px;
+    width: 31.3%;
+    height:350px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     display: flex;
@@ -147,7 +105,7 @@ a
     margin: 10px;
 }
 .user_picture {
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--var(--black-color)-color);
     width:var(--avatar-size);
     height:var(--avatar-size);
     border-radius:50%;
@@ -182,14 +140,14 @@ a
     border-radius: 5px;
     background: var(--white-color);
     font-size: var(--font-medium);
-    padding: 10px; color: var(--black-color);
+    padding: 10px; color: var(--var(--black-color)-color);
 }
 .modi.active, .del.active {
     display: block;
 }
 
 .star {
-    border: 1px solid var(--black-color);
+    border: 1px solid var(--var(--black-color)-color);
     border-radius: 30px;
     background-color: var(--white-color);
     padding: 1px 5px;
@@ -210,3 +168,9 @@ a
     margin-bottom: auto; margin-top: auto;
     margin-left: 20px; margin-right: 20px;
 }
+
+.wrap{width: 100%; overflow: hidden; }
+.box{margin-bottom:5px; width: 100px; height: 100px; border: 1px solid black; border-radius: 8px; background-color: transparent;}
+.icon{width: 40px;  margin: auto }
+.icon_title{font: 13px 'inherit'; color: black;}
+.icon img{display: block; width: 100%;}
