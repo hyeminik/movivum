@@ -54,11 +54,14 @@ a {text-decoration: none;}
     display: flex;
     justify-content:flex-start;
 }
-.profile .avatar {
+.profile .poster {
     width: 210px; height: 250px;
     border-radius: 3px; overflow: hidden;
     display: block;
     background: var(--gray-dark-color);
+}
+.profile .poster img {
+    display: block; width: 100%;
 }
 .avatar_info {
     display: flex;
