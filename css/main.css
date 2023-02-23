@@ -2,7 +2,7 @@
 *::before,*::after{margin: 0; padding: 0; box-sizing: border-box;}
 ul,ol,li{list-style: none;}
 a{text-decoration: none;}
-.content{width:100%; padding: 100px 0;}
+.content{width:100%; padding: 70px 0;}
 .content .wrap{display: flex; flex-flow: row wrap; justify-content: space-between;}
 .inner{width: 1170px; margin: 0 auto;}
 body{background-color: rgba(2, 4, 10);}
@@ -21,7 +21,7 @@ body{background-color: rgba(2, 4, 10);}
 #header{background: linear-gradient(to bottom, rgba(2, 4, 10, 0.373) 0%,rgba(0, 0, 0, 0) 100%);}
 #gnb{height: 60px; display: flex; justify-content: space-between; align-items: center;}
 #gnb .logo{display: block; font: bold 22px 'inherit'; color: #fff;}
-#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 30px;}
+#gnb .middle{display: flex; justify-content: center; align-items: center; width: 400px; height: 35px; background-color: rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 30px;}
 #gnb .search{margin-right: 10px; width: 340px; height: 24px; border: none; background-color: transparent; color: rgba(255, 255, 255);}
 #gnb .search:active{outline: none;}
 #gnb .search:focus{outline: none;}
@@ -35,18 +35,23 @@ body{background-color: rgba(2, 4, 10);}
 #trailer .movie_video{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; overflow: hidden;}
 #trailer .bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(2, 4, 10, 0) 0%, rgba(2, 4, 10, 0.25) 95%, rgba(2, 4, 10, 0.6) 100%);}
 #trailer .bg::before{
-    content: ''; display: block; position: absolute; left: 0; top: 0; width: 360px; height: 100%;
-    background: linear-gradient(to right, rgb(2, 4, 10) 0%, rgba(2, 4, 10, 0.8) 20%, rgba(2, 4, 10, 0) 100%); /*rgba(24, 24, 25, 0)*/
+    content: ''; display: block; position: absolute; left: 0; top: 0; width: 340px; height: 100%;
+    background: linear-gradient(to right, rgb(2, 4, 10) 0%, rgba(2, 4, 10, 0.8) 30%, rgba(2, 4, 10, 0) 100%);
 }
 #trailer .bg::after{
-    content: ''; display: block; position: absolute; right: 0; top: 0; width: 370px; height: 100%; 
-    background: linear-gradient(to right, rgba(2, 4, 10, 0) 0%, rgba(2, 4, 10, 0.8) 80%, rgb(2, 4, 10) 100%); /*181819*/
+    content: ''; display: block; position: absolute; right: 0; top: 0; width: 340px; height: 100%; 
+    background: linear-gradient(to right, rgba(2, 4, 10, 0) 0%, rgba(2, 4, 10, 0.8) 70%, rgb(2, 4, 10) 100%);
 }
 #trailer .movie_info{position: absolute; left: 18%; top: 53%; width: 300px; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-start; color: #fff;}
 #trailer .movie_info .movie_title{font-size: 28px;}
 #trailer .movie_story{margin: 15px 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; font-size: 13px; color: #ffffffbd; overflow: hidden;}
 #trailer .more_button{display: block; width: 120px; font: 14px/35px 'inherit'; cursor: pointer; z-index: 9999; color: #ffffffbd; text-align: center; background-color: rgba(255, 255, 255, 0.25); border-radius: 20px;}
 #trailer .more_button:hover{background-color: rgba(21, 21, 21, 0.893);}
+
+/* banner */
+#banner{position: relative; top:0px;}
+
+#banner .pic{ background: url('../img/Shot_980180.jpg') no-repeat center;  background-size: cover; width: 100%; height: 180px;}
 
 /* 인기순,추천순,최신순 공통 */
 .title{margin-bottom: 10px; font-size: 28px; color: #f0f6fc;}
@@ -77,6 +82,7 @@ body{background-color: rgba(2, 4, 10);}
 .swiper:hover .swiper-button-next::after{transition: 0.3s;}
 .swiper:hover .swiper-button-prev::after{left: -5px;}
 .swiper:hover .swiper-button-next::after{right: -5px;}
+
 
 
 /* 영화제 수상작 */

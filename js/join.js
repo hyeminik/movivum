@@ -31,14 +31,15 @@ $(function(){
             if(swiper.realIndex==4){
                 $('.swiper-button-next').removeClass('swiper-button-disabled');
                 $('.swiper-button-next').text("완료");
+                $('.swiper-button-prev').hide();
                 $('.checkmark').show();
                 $('.swiper-button-next').on('click',function(){
-                    alert("hello");
                     location.href='/main.html';
                 })
             }else if((swiper.realIndex!=4)){
                 $('.swiper-button-next').text("다음");
                 $('.checkmark').hide();
+                $('.swiper-button-prev').show();
             }
         }
         }
@@ -78,8 +79,6 @@ $(function(){
         });
         $('#checkAll').prop('checked', checkeditems);
     });
-    
-
     
 
     //글자길이 계산

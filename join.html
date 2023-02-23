@@ -43,7 +43,6 @@
                   <div class="tip alert" id="Age">
                     <div class="icon"><img src="img/alert-circle-outline.svg" alt=""></div>
                     <span class="tip_text minAge">만 14세 미만은 가입할 수 없습니다.</span>
-                    <!-- <span class="tip_text wrong">잘못 입력하셨습니다. 다시 입력해주세요.</span> -->
                   </div>
               </div>
               <ul class="checker">
@@ -64,7 +63,7 @@
             <!-- 아이디 -->
             <form action="" id="idpw_form" name="idpw_form">
               <div class="join_row">
-                <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력해주세요.">
+                <input type="text" name="user_id" id="user_id" minlength="2" maxlength="20" placeholder="아이디를 입력해주세요.">
                 <div class="tip help">
                   <div class="icon"><img src="img/help-circle-outline.svg" alt=""></div>
                   <span class="tip_text">영문,숫자,특수문자 중 2가지 이상을 혼용하여 5~20자 이내로 입력해주세요.</span>
