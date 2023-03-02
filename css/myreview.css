@@ -27,6 +27,11 @@ a
     --font-micro: 10px;
 }
 
+article>section
+{
+    overflow: hidden;
+}
+
 .divider_line
 {
     height:70%;
@@ -118,7 +123,6 @@ a
     justify-content: flex-start;
     margin-top: 10px;
     height: 750px;
-    overflow: hidden;
 }
 .review_card {
     background: var(--gray-light-color);

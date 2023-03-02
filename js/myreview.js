@@ -26,7 +26,8 @@ $(function () {
         max_row = Math.ceil(card_num / card_row); //올림 반드시 필요
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight -10 && row < max_row) {//(현재 화면높이+현재Y스크롤 값) > (최대 문서높이-여유값)
             row += 1;
-            $(".wrap_review").css("height", 380 * (row)); //카드 높이 및 하단여백 만큼 확장
+            $("article>section").css("height", 380 * (row)+$("article>section").offset().top); //카드 높이 및 하단여백+.summary_container 만큼 확장
+            //$(".wrap_review").css("height", 380 * (row)); //카드 높이 및 하단여백 만큼 확장
             //alert("row:"+row+"/max_row:"+max_row+" height:"+$(".wrap_review").css("height"));
         }
     })
