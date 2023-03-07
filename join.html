@@ -28,10 +28,14 @@
         <div class="slide-captions"></div>
         <div class="swiper-wrapper">
           <div class="swiper-slide slide-1" data-title="회원가입" data-subtitle="이메일을 인증해주세요.">
-            <form action="" name="email_form" id="email_form">
+            <form name="email_form" id="email_form">
               <!-- 이메일 -->
               <div class="join_row">
                 <input type="text" name="user_email" id="user_email" placeholder="email@gmail.com">
+                <div class="tip emailCheck alert">
+                  <div class="tip_icon"><img src="img/alert-circle-outline.svg" alt=""></div>
+                  <p class="tip_text">올바른 이메일 형식이 아닙니다.</p>
+                </div>
               </div>
               <div class="join_row">
                 <ul>
@@ -86,7 +90,7 @@
                   <input type="password" name="user_password" id="user_password" placeholder="비밀번호를 입력해주세요.">
                   <div class="tip pwdCheck">
                     <div class="tip_icon"><img src="img/help-circle-outline.svg" alt=""></div>
-                    <p class="tip_text">영문 대소문자, 숫자, 특수문자를 2가지 이상 혼용하여 입력해주세요.</p>
+                    <p class="tip_text">영문,숫자,특수문자 중 2가지 이상을 사용하여 8~16자 입력해주세요.</p>
                   </div>
                 </div>
               <!-- 비밀번호 확인 -->
@@ -94,7 +98,7 @@
                 <input type="password" name="password_check" id="password_check" placeholder="비밀번호를 한 번 더 입력해주세요.">
                 <div class="tip pwdCheck2 alert">
                   <div class="tip_icon"><img src="img/alert-circle-outline.svg" alt=""></div>
-                  <p class="tip_text">비밀번호가 동일하지 않습니다.</p>
+                  <p class="tip_text">비밀번호가 일치하지 않습니다.</p>
                 </div>
               </div>
             </form>

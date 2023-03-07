@@ -100,6 +100,7 @@ $(function(){
     let blank_pattern = /[\s]/g;//문자열에 공백이 있는 경우
 	let alphabet = /[a-zA-Z]/;// 문자
 	let special_chars = /[~!@#$%^&*()_+|<li>?:{}]/;// 특수문자
+    
     $('#user_name').on('propertychange change keyup paste input',function(){
         let userName=$(this).val();
         let inputlength = getTextLength(userName);
@@ -113,17 +114,29 @@ $(function(){
         }
     })
 
-    //slide-0
-    //이메일인증
-
     
     //slide-1
-    //사용자 이메일
-    $('#user_email').on('propertychange change keyup paste input',function(){
-        let userEmail=$(this).val();
-        alert(userEmail);
+    //사용자 이메일 => RFC 5322형식을 이용한 유효성체크
+    $('.emailCheck').hide();
+    $('.sendEmail').on('click',function(){
+        let userEmail=$('#user_email').val();
+        let regex = /^[-0-9A-Za-z!#$%&'*+/=?^_`{|}~.]+@[-0-9A-Za-z!#$%&'*+/=?^_`{|}~]+[.]{1}[0-9A-Za-z]/;
+        if(userEmail!=""){
+            if(regex.test(userEmail)==false){
+                $('.emailCheck').show();
+                return false;
+            }else{
+                $('.emailCheck').show();
+                $('.emailCheck').removeClass('alert').addClass('check');
+                $('.emailCheck').find('img').attr('src','img/checked.svg');
+                $('.emailCheck > .tip_text').text('인증키가 메일로 전송되었습니다!');
+                return;
+            } 
+        }
     })
+    
 
+    //slide-2
     //사용자 이름
     $('#user_name').on('propertychange change keyup paste input',function(){
         let input = $(this).val();
@@ -138,19 +151,6 @@ $(function(){
             }
         }
     })
-    //사용자 암호 동일한지 체크
-    $('.pwdCheck2').hide();
-    $('#password_check').on('propertychange change keyup paste input',function(){
-        let pwdinput=$('#user_password').val();
-        let pwdcheck=$(this).val();
-        if(pwdcheck!=pwdinput){
-            $('.pwdCheck2').hide();
-            $('.pwdCheck2').show();
-        }else{
-            $('.pwdCheck2').hide();
-        }
-    }) 
-    
     // 약관동의
     $('.checker').on('click', '#checkAll', function () {
         let checked = $(this).is(':checked');
@@ -174,10 +174,25 @@ $(function(){
         $('#checkAll').prop('checked', checkeditems);
     });
 
+    //slide-3
+    //사용자 암호 동일한지 체크
+    $('.pwdCheck2').hide();
+    $('#password_check').on('propertychange change keyup paste input',function(){
+        let pwdinput=$('#user_password').val();
+        let pwdcheck=$(this).val();
+        if(pwdcheck!=pwdinput){
+            $('.pwdCheck2').hide();
+            $('.pwdCheck2').show();
+        }else{
+            $('.pwdCheck2').hide();
+        }
+    }) 
+
+
 
     //slide-5
     // 선호장르 선택/선택해제
-    $('.slide-4 .box').click(function(){
+    $('.slide-5 .box').click(function(){
         $(this).toggleClass('clicked');
     })
 })

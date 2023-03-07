@@ -49,13 +49,13 @@ body{width: 100%; height: 100%; background-color: rgba(2, 4, 10);}
 .tip .tip_icon img{display: block; width: 100%; height: 100%;}
 .tip .tip_text{width: 100%; font-size: 13px;}
 .tip.alert{filter: invert(19%) sepia(79%) saturate(2605%) hue-rotate(344deg) brightness(111%) contrast(100%);}
-
+.tip.check{filter: invert(54%) sepia(92%) saturate(3571%) hue-rotate(115deg) brightness(104%) contrast(101%);}
 /* slide-1 */
 .slide-1 .join_row{margin-bottom: 8px;}
 .slide-1 .join_row>ul{width: 100%; display: flex; justify-content: space-between; align-items: center;}
 .join_row>ul>li{width: 65%;}
 .join_row>ul>li:last-of-type{width: 31%; height: 45px;}
-.join_row>ul>li:last-of-type .sendEmail{background-color: #B983FF; color: #1b1b1b; border: none; border-radius: 5px; width: 100%; height: 100%;}
+.join_row>ul>li:last-of-type .sendEmail{width: 100%; height: 100%; background-color: #B983FF; color: #1b1b1b; border: none; border-radius: 5px; cursor: pointer;}
 .join_row>ul>li:last-of-type .sendEmail:hover{background-color: #9e66e6;}
 
 /* step3 프로필 사진선택+닉네임 */
