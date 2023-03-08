@@ -27,6 +27,7 @@
       <div class="swiper join_swiper">
         <div class="slide-captions"></div>
         <div class="swiper-wrapper">
+          <!-- step1 -->
           <div class="swiper-slide slide-1" data-title="회원가입" data-subtitle="이메일을 인증해주세요.">
             <form name="email_form" id="email_form">
               <!-- 이메일 -->
@@ -39,7 +40,7 @@
               </div>
               <div class="join_row">
                 <ul>
-                  <li><input type="text" name="emailAuth" id="emailAuth" placeholder="인증키를 입력해주세요."></li>
+                  <li><input type="text" name="email_auth" id="email_auth" placeholder="인증키를 입력해주세요."></li>
                   <li><button type="button" class="sendEmail">인증키 받기</button></li>
                 </ul>
                 <ul class="tip emailAuthCheck">
@@ -49,7 +50,7 @@
               </div>
             </form>
           </div>
-          <!-- step1 -->
+          <!-- step2 -->
           <div class="swiper-slide slide-2" data-title="회원가입" data-subtitle="이름과 생년월일을 입력해주세요.">
             <form action="" name="namebirth_form" id="namebirth_form">
               <!-- 이름 -->
@@ -62,7 +63,7 @@
               </div>
               <!-- 생년월일 -->
               <div class="join_row">
-                  <input type="text" name="birth_date" id="birth_date"  minlength="8" maxlength="8" placeholder="생년월일을 입력해주세요(ex.19900101)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                  <input type="text" name="user_birth" id="user_birth"  minlength="8" maxlength="8" placeholder="생년월일을 입력해주세요(ex.19900101)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                   <div class="tip birthCheck">
                     <div class="tip_icon"><img src="img/help-circle-outline.svg" alt=""></div>
                     <p class="tip_text">14세 미만은 회원가입할 수 없습니다.</p>
@@ -81,7 +82,7 @@
               </ul>
             </form>
           </div>
-          <!-- step2 -->
+          <!-- step3 -->
           <div class="swiper-slide slide-3" data-title="회원가입" data-subtitle="비밀번호를 입력해주세요.">
             <!-- 아이디 -->
             <form action="" id="pw_form" name="idpw_form">
@@ -103,7 +104,7 @@
               </div>
             </form>
           </div>
-          <!-- step3 -->
+          <!-- step4 -->
           <div class="swiper-slide slide-4"data-title="회원가입" data-subtitle="닉네임과 프로필 사진을 설정해주세요.">
             <form action="" id="nickpic_form" name="nickpic_form">
               <!-- 프로필 이미지 선택 -->
@@ -121,78 +122,78 @@
             </div>
           </form>
           </div>
-          <!-- step4 -->
-          <div class="swiper-slide slide-5" data-title="회원가입" data-subtitle="좋아하는 장르를 선택해주세요.">
-              <div class="inner">
-                <div class="wrap">
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/ghost.png" alt=""></div>
-                      <span class="icon_title">공포</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/hearts.png" alt=""></div>
-                      <span class="icon_title">로맨스</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/ufo.png" alt=""></div>
-                      <span class="icon_title">SF</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/crime-scene.png" alt=""></div>
-                      <span class="icon_title">범죄</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/search.png" alt=""></div>
-                      <span class="icon_title">추리</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/magic-wand.png" alt=""></div>
-                      <span class="icon_title">판타지</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/question-mark.png" alt=""></div>
-                      <span class="icon_title">미스터리</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/smile.png" alt=""></div>
-                      <span class="icon_title">코미디</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
-                      <span class="icon_title">스릴러</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/swords.png" alt=""></div>
-                      <span class="icon_title">전쟁</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/emotions.png" alt=""></div>
-                      <span class="icon_title">드라마</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/sport.png" alt=""></div>
-                      <span class="icon_title">스포츠</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/graduation.png" alt=""></div>
-                      <span class="icon_title">학원물</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/cat.png" alt=""></div>
-                      <span class="icon_title">애니메이션</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/megaphone.png" alt=""></div>
-                      <span class="icon_title">액션</span>
-                  </button>
-                  <button type="button" class="box">
-                      <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
-                      <span class="icon_title">뮤지컬</span>
-                  </button>
-                </div>
-            </div>
-          </div>
           <!-- step5 -->
+          <div class="swiper-slide slide-5" data-title="회원가입" data-subtitle="좋아하는 장르를 선택해주세요.">
+            <form name="genre_form" id="genre_form"> 
+              <div class="wrap">
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/ghost.png" alt=""></div>
+                    <span class="icon_title">공포</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/hearts.png" alt=""></div>
+                    <span class="icon_title">로맨스</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/ufo.png" alt=""></div>
+                    <span class="icon_title">SF</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/crime-scene.png" alt=""></div>
+                    <span class="icon_title">범죄</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/search.png" alt=""></div>
+                    <span class="icon_title">추리</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/magic-wand.png" alt=""></div>
+                    <span class="icon_title">판타지</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/question-mark.png" alt=""></div>
+                    <span class="icon_title">미스터리</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/smile.png" alt=""></div>
+                    <span class="icon_title">코미디</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
+                    <span class="icon_title">스릴러</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/swords.png" alt=""></div>
+                    <span class="icon_title">전쟁</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/emotions.png" alt=""></div>
+                    <span class="icon_title">드라마</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/sport.png" alt=""></div>
+                    <span class="icon_title">스포츠</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/graduation.png" alt=""></div>
+                    <span class="icon_title">학원물</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/cat.png" alt=""></div>
+                    <span class="icon_title">애니메이션</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/megaphone.png" alt=""></div>
+                    <span class="icon_title">액션</span>
+                </button>
+                <button type="button" class="box">
+                    <div class="icon"><img src="img/icon/theatre-curtains.png" alt=""></div>
+                    <span class="icon_title">뮤지컬</span>
+                </button>
+              </div>
+          </form>
+          </div>
+          <!-- step6 -->
           <div class="swiper-slide slide-6" data-title="회원가입" data-subtitle="가입완료">
             <div class="wrapper">
               <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
